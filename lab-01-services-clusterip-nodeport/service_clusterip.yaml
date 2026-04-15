@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: react-clusterip
 spec:
-  type: ClusterIP
   selector:
-    app: react-app
+    app: react
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 80
       targetPort: 80
+  type: ClusterIP
